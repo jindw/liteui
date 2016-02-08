@@ -1,0 +1,22 @@
+<Layout width='100%' height='100%' background='#FFF' arguments="keys,contents,index">
+	<List width="16%" height="100%" background='#ddd' 
+		var='key' value="${keys}" observe="${index}">
+		<Button color="#333" textAlign="center" action='${index = for.index}' width="100%" height="60" 
+			background="${for.index == index? '#bbb':'#eee'}" value="  ${key}"/>
+	</List>
+	<Card id="content" background='#ddd' 
+		width="84%" height="100%" left='16.2%' top='0'
+		index="${index}" var="content" value='${contents}'>
+		<Text padding="12" color="#000" background="#ddd"
+		     action="${content.play()}"
+		     width="100%" height="7%" value="${content.title}"/>
+		<Layout width="100%" height="93%" top="7%" background="#fd6" >
+			<Text padding="12" color="#333" width="100%" height="100%" 
+				value="${content.value}"
+				keywordPattern="/^[^\s]+/gm"
+				keywordStyle="#933"
+				
+				/>
+		</Layout>
+	</Card>
+</Layout>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html manifest2='offline.manifest'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content='width=720'/>
+<title>创意罗盘</title>
+<style>
+body,html,canvas{margin:0;padding:0;}
+body,html{width: 100%;height:100%;}
+canvas{/*transform-origin:0 0;transform:scale(0.5,0.5);/* */}
+</style><script src="./assets/boot.js">
+var greek = require('example-greek-alphabet');
+</script>
+</head>
+<body onload="greek.load()"></body>
+</html>
