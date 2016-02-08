@@ -516,7 +516,7 @@ var keys = alphaBeta.map(function(a){
 });
 function play(n){
 	var audio = document.createElement('audio');
-    audio.src = 'http://www.xidea.club/lan/'+n+'.wav';
+    audio.src = 'http://www.xidea.club/greek/sound/'+n+'.wav';
     audio.loop = false; 
 	audio.play()
 }

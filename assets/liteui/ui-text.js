@@ -8,7 +8,7 @@ function TextView(maxWidth,maxHeight,text,color,font){
 	this.text = text;
 	this.color = color;
 	//console.log('@@@@'+color,this.draw);
-	this.font = font || '32px '+config.fontFamily;
+	this.font = font || '26px '+config.fontFamily;
 	this.patterns = [];
 	this.colors = [];
 	this.fonts = [];
@@ -49,7 +49,7 @@ function textPainter(ctx,width,height){
 		}
 		if(this.parentWidget.supportScroll){
 			this.resize(width,contentHeight);
-			console.log('resize text view:',contentHeight)
+			//console.log('resize text view:',contentHeight)
 			return;
 		}
 	}
