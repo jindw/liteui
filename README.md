@@ -1,8 +1,14 @@
 #Lite UI System
 a sample layout system,base on canvas api and native proxy.
 
+Function
+----
+* dirty flag and GPU opotimize
+* model bind
+
+
 Example:
-=====
+----
 ``` xml
 <Layout width='100%' height='100%' background='#FFF' arguments="keys,contents,index">
 	<List width="16%" height="100%" background='#ddd' 
