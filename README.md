@@ -3,7 +3,7 @@ a sample layout system,base on canvas api and native proxy.
 
 Example:
 =====
-``` 
+``` xml
 <Layout width='100%' height='100%' background='#FFF' arguments="keys,contents,index">
 	<List width="16%" height="100%" background='#ddd' 
 		var='key' value="${keys}" observe="${index}">
