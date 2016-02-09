@@ -20,9 +20,7 @@ Example:
 			<Text padding="12" color="#333" width="100%" height="100%" 
 				value="${content.value}"
 				keywordPattern="/^[^\s]+/gm"
-				keywordStyle="#933"
-				
-				/>
+				keywordStyle="#933"/>
 		</Layout>
 	</Card>
 </Layout>   
