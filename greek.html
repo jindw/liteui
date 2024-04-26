@@ -1,0 +1,16 @@
+<!doctype html>
+<html manifest2='offline.manifest'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content='width=720'/>
+<title>希腊字母表</title>
+<style>
+body,html,canvas{margin:0;padding:0;}
+body,html{width: 100%;height:100%;}
+canvas{/*transform-origin:0 0;transform:scale(0.5,0.5);/* */}
+</style><script type="module">
+import {greek} from 'assets/example-greek-alphabet';
+</script>
+</head>
+<body onload="greek.load()"></body>
+</html>

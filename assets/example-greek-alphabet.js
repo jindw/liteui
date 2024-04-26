@@ -534,8 +534,30 @@ function findContent(k){
 	//console.log('content item:',i,j,k,rtv)
 	return rtv.replace(/(^\t+)/gm,'$1$1$1$1$1$1$1$1');
 }
-exports.data = [keys,values,1];
-var source = require('./greek-xul.xml')
-exports.load = function(){
-	require('liteui/liteui').load(source || './assets/greek-xul.xml',[keys,values,1])
+export data = [keys,values,1];
+var source = `<Layout width='100%' height='100%' background='#FFF' arguments="keys,contents,index">
+	<List width="16%" height="100%" background='#ddd' 
+		var='key' value="${keys}" observe="${index}">
+		<Button color="#333" textAlign="center" action='${index = for.index}' width="100%" height="60" 
+			background="${for.index == index? '#bbb':'#eee'}" value="  ${key}"/>
+	</List>
+	<Card id="content" background='#ddd' 
+		width="84%" height="100%" left='16.2%' top='0'
+		index="${index}" var="content" value='${contents}'>
+		<Text padding="12" color="#000" background="#ccc"
+		     action="${content.play()}"
+		     width="100%" height="8%" value="${content.title}"/>
+		<Layout width="100%" height="92%" top="8%" background="#ddd" >
+			<Text padding="12" color="#333" width="100%" height="100%" 
+				value="${content.value}"
+				keywordPattern="/^[^\s]+/gm"
+				keywordStyle="#933"
+				
+				/>
+		</Layout>
+	</Card>
+</Layout>`
+import {load} from 'liteui/liteui';
+export function load(){
+	load(source,[keys,values,1])
 }

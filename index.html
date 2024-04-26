@@ -1,16 +1,60 @@
-<!doctype html>
-<html manifest2='offline.manifest'>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content='width=720'/>
-<title>希腊字母表</title>
+<html>
+<!-- <script type="text/javascript" src="lib/model.js"  ></script> -->
+<!-- <script type="module" src="lib/draw.js"></script> -->
+
+	<!--
+	#scroll_view{
+		position:static;
+		border:1px solid red;
+		overflow: auto;
+		-webkit-overflow-scrolling :auto;
+		height:600px;
+		width:600px;
+		margin: 100px;
+	}
+	#content_view{
+		position:static;
+		border:1px solid blue;
+		overflow: hidden;
+		width:110%;
+		height:10px;
+	}
+	#canvas{
+		position:absolute;
+		pointer-events: none;
+	}
+	-->
+
 <style>
-body,html,canvas{margin:0;padding:0;}
-body,html{width: 100%;height:100%;}
-canvas{/*transform-origin:0 0;transform:scale(0.5,0.5);/* */}
-</style><script src="./assets/boot.js">
-var greek = require('example-greek-alphabet');
-</script>
-</head>
-<body onload="greek.load()"></body>
+	canvas{
+	}
+	#content_view{
+		position:relative;
+		/*border:1px solid blue;*/
+		overflow: hidden;
+		width:90%;
+		height:90%;
+	}
+</style>
+<body>
+	<div id="content_view">
+		<!--
+		<canvas style="width:100%;height:100%"></canvas>
+		<div class="scroll_mock_view"><div class="slider_mock_view"></div></div>
+		-->
+	</div>
+	<script type="module" src="./index.js">
+	</script><script>
+		var container = document.getElementById('content_view');
+		
+		// setInterval(function(){
+		// 	console.log(container.style.cursor)
+		// 	if( container.style.cursor == 'pointer'){
+		// 		container.style.cursor = 'progress';
+		// 	}else{
+		// 		container.style.cursor = 'pointer'
+		// 	}
+		// },200)
+	</script>
+</body>
 </html>

@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "liteui",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "browser-assert": "^1.2.1"
+  }
+}

@@ -559,7 +559,8 @@ function prepareWidgetDraw(ctx,widget,clips,cmd,forceRedraw){
 				//ctx.save();ctx.translate(x0,y0);ctx.beginPath();
 				try{
 					//ctx.rect(0,0,w.width,w.height);ctx.closePath();ctx.clip()
-					prepareWidgetDraw(ctx,child,clips,cmd,forceRedraw)
+					prepareWidgetDraw(ctx,child,lib
+						,cmd,forceRedraw)
 				}finally{
 					//ctx.restore();
 				}
